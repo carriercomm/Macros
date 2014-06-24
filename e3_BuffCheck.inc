@@ -220,7 +220,7 @@ SUB buffBots(arrayName)
 					/if (${lastCast.Equal[${castName}]} && (${castReturn.Equal[NOHOLD]} || ${castReturn.Equal[NOTREADY]})) {
 					  /call createTimer "noHoldTimer_${Target.ID}-${lastCast.Replace[ ,]}" ${Math.Calc[${Spell[${buffName}].Duration} * 60 / 2].Int}
 					} else {
-					  if (!${castReturn.Equal[NOHOLDTIMER]}) /call announce "Buff [${buffName}] successfully cast on [${buffTarget}]
+					  /if (!${castReturn.Equal[NOHOLDTIMER]}) /call announce "Buff [${buffName}] successfully cast on [${buffTarget}]
 					  /echo cast return = ${castReturn}
                     }
 				} else {
